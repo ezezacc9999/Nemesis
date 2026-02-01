@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Nemesis</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Onboarding screen -->
+        <section id="onboarding" class="screen active">
+            <h1 class="glitch" data-text="THE NEMESIS">THE NEMESIS</h1>
+            <p class="subtitle">Create your rival. Fuel your ambition.</p>
+            <div class="input-group">
+                <label>What is your Goal?</label>
+                <input type="text" id="userGoal" placeholder="e.g. Become a Developer">
+            </div>
+            <div class="input-group">
+                <label>What is your Insecurity?</label>
+                <input type="text" id="userInsecurity" placeholder="e.g. I procrastinate too much">
+            </div>
+            <div class="persona-select">
+                <label>Choose your Nemesis Type:</label>
+                <div class="options">
+                    <button class="persona-btn" data-type="PERFECTIONIST">Perfectionist</button>
+                    <button class="persona-btn" data-type="NATURAL">Natural</button>
+                    <button class="persona-btn" data-type="GRINDER">Grinder</button>
+                </div>
+            </div>
+            <button id="summonBtn" class="primary-btn">SUMMON NEMESIS</button>
+        </section>
+        <!-- Dashboard screen -->
+        <section id="dashboard" class="screen">
+            <div class="header">
+                <div class="status-indicator"></div>
+                <span id="nemesisStatus">NEMESIS IS ACTIVE</span>
+            </div>
+            <div class="arena">
+                <div class="combatant nemesis">
+                    <h2 id="nemesisNameDisplay">NEMESIS</h2>
+                    <div class="score-box">
+                        <span id="nemesisScore">0</span>
+                        <small>KP</small>
+                    </div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="combatant user">
+                    <h2>YOU</h2>
+                    <div class="score-box">
+                        <span id="userScore">0</span>
+                        <small>KP</small>
+                    </div>
+                </div>
+            </div>
+            <div class="taunt-box">
+                <p id="tauntDisplay">"Waiting for your move..."</p>
+            </div>
+            <div class="actions">
+                <button id="workBtn" class="action-btn">I DID WORK (+10 KP)</button>
+                <button id="surrenderBtn" class="action-btn danger">GIVE UP</button>
+            </div>
+            <button id="resetBtn" class="text-btn">Reset Simulation</button>
+        </section>
+    </div>
+    <!-- App script -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
